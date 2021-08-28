@@ -1,0 +1,14 @@
+version: "3"
+services:
+  jupyter:
+    build: .
+    volumes:
+      - ./working/:/tf2/
+      - ./secret/.kaggle:/root/.kaggle
+    ports:
+      - 8888:8888
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: [gpu]
