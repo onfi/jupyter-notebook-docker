@@ -3,7 +3,7 @@ services:
   jupyter:
     build: .
     volumes:
-      - ./working/:/tf2/
+      - ./working/:/tf/
       - ./secret/.kaggle:/root/.kaggle
     ports:
       - 8888:8888
